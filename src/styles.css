@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    padding-top: 56px;
+}
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 230px;
+    padding: 10px 15px 0;
+    height: calc(100vh - 80px);
+    background-color: #343a40;
+    border-radius: 2px;
+}
+
+.container-fluid {
+    position: relative;
+    margin-left: 230px;
+}
+
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
