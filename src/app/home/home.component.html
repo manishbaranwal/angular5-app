@@ -1,5 +1,12 @@
-<div class="starter-template">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a
-        mostly barebones HTML document.</p>
+<div class="page-container starter-template">
+    <div class="lead">
+        <div class="row" *ngFor="let c of places">
+            <div class="col-lg-6 col-xs-6 col-md-6 col-sm-6 image">
+                <div class="card mb-3">
+                    <div class="card-header">{{c}}</div>
+                    <img src="assets/images/{{c}}.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

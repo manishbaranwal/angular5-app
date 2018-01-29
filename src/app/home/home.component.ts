@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {AppConfig} from '../app.config';
 
 @Component({
     selector: 'app-home',
@@ -6,11 +7,13 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+    places = AppConfig.PLACES;
 
     constructor() {
     }
 
     ngOnInit() {
+        console.log(this.places);
     }
 
 }

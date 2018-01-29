@@ -27,11 +27,12 @@
         </ul>
         <form class="form-inline my-2 my-lg-0" name="search-form">
             <div class="dropdown show">
-                <input type="text" name="search" class="form-control mr-sm-2 dropdown-toggle" id="dropdownMenuLink"
+                <input type="text" name="search" class="form-control mr-sm-2 dropdown-toggle text-capitalize"
+                       id="dropdownMenuLink"
                        data-toggle="dropdown" placeholder="Search" [(ngModel)]="searchStr">
 
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" (click)="search(p)" href="#" *ngFor="let p of places"
+                <div class="dropdown-menu text-capitalize" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" (click)="search(p)" href="#" *ngFor="let p of places | filter: searchStr"
                        [routerLink]="['place', p]">{{p}}</a>
                 </div>
             </div>

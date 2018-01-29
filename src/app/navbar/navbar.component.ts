@@ -1,5 +1,6 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {Router, RoutesRecognized} from '@angular/router';
+import {AppConfig} from '../app.config';
 
 @Component({
     selector: 'app-navbar',
@@ -9,7 +10,7 @@ import {Router, RoutesRecognized} from '@angular/router';
 export class NavbarComponent implements OnInit {
     private subs: any;
     searchStr: string;
-    places = ['delhi', 'blr'];
+    places = AppConfig.PLACES;
 
     constructor(private router: Router) {
     }
@@ -19,7 +20,7 @@ export class NavbarComponent implements OnInit {
             if (val instanceof RoutesRecognized) {
                 this.searchStr = val.state.root.firstChild.params.city;
                 if (typeof this.searchStr !== 'undefined' && this.places.indexOf(this.searchStr) === -1) {
-                    this.router.navigate(['place']);
+                    this.router.navigate(['']);
                 }
             }
         });

@@ -9,6 +9,7 @@ import {SidebarComponent} from './sidebar/sidebar.component';
 import {HomeComponent} from './home/home.component';
 import {PlaceComponent} from './place/place.component';
 import {FormsModule} from '@angular/forms';
+import {AppFilterPipe} from './app.filter.pipe';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {FormsModule} from '@angular/forms';
         NavbarComponent,
         SidebarComponent,
         HomeComponent,
-        PlaceComponent
+        PlaceComponent,
+        AppFilterPipe
     ],
     imports: [
         BrowserModule,

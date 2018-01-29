@@ -14,9 +14,12 @@ body {
     border-radius: 2px;
 }
 
-.container-fluid {
+.main-container {
     position: relative;
-    margin-left: 230px;
+}
+
+.page-container {
+    margin-left: 230px !important;
 }
 
 .starter-template {
